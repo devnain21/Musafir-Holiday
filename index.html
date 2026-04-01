@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musafir Holiday - Your Travel Partner | Tour Packages India & International</title>
+    <meta name="description" content="Musafir Holiday offers best tour packages for India & International destinations. Book Rajasthan, Kerala, Goa, Kashmir, Thailand, Dubai tours at best prices.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-envelope"></i> info@musafirholiday.com</span>
+                    <span><i class="fas fa-phone"></i> +91-9555487620</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-plane-departure"></i></span>
+                    <div>
+                        <span class="logo-text">Musafir</span>
+                        <span class="logo-sub">Holiday</span>
+                    </div>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#international">International</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#enquiry" class="nav-btn">Get Free Quote</a>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1564507592412-526c72cc92ef?w=1920&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Explore India</span>
+                    <h1>Taj Mahal - Agra</h1>
+                    <p>Witness the timeless beauty of one of the Seven Wonders of the World</p>
+                    <a href="#destinations" class="btn-primary">Explore Packages</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1920&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Adventure Awaits</span>
+                    <h1>Camel Safari - Jaisalmer</h1>
+                    <p>Experience the golden desert and royal heritage of Rajasthan</p>
+                    <a href="#destinations" class="btn-primary">Explore Packages</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">God's Own Country</span>
+                    <h1>House Boat - Kerala</h1>
+                    <p>Cruise through serene backwaters in traditional houseboats</p>
+                    <a href="#destinations" class="btn-primary">Explore Packages</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=1920&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Mountain Paradise</span>
+                    <h1>Himachal Tour Package</h1>
+                    <p>Discover snow-capped mountains, lush valleys and adventure</p>
+                    <a href="#destinations" class="btn-primary">Explore Packages</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1920&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Beach Vibes</span>
+                    <h1>Goa Tour Package</h1>
+                    <p>Sun, sand, and unforgettable beach experiences await you</p>
+                    <a href="#destinations" class="btn-primary">Explore Packages</a>
+                </div>
+            </div>
+        </div>
+        <button class="hero-nav prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number" data-target="5000">0</span>+
+                        <p>Happy Travelers</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <div>
+                        <span class="stat-number" data-target="50">0</span>+
+                        <p>Destinations</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <div>
+                        <span class="stat-number" data-target="200">0</span>+
+                        <p>Tour Packages</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="stat-number" data-target="10">0</span>+
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section class="enquiry-section" id="enquiry">
+        <div class="container">
+            <div class="enquiry-card">
+                <div class="enquiry-left">
+                    <h2>Plan Your Dream Trip</h2>
+                    <p>Fill in your details and our travel experts will craft the perfect itinerary for you.</p>
+                    <div class="enquiry-features">
+                        <div class="enquiry-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Customized Packages</span>
+                        </div>
+                        <div class="enquiry-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="enquiry-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="enquiry-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trusted by 5000+ Travelers</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="enquiry-form" id="enquiryForm">
+                    <h3>Get Free Quote</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Destination</option>
+                            <option>Rajasthan</option>
+                            <option>Golden Triangle</option>
+                            <option>Kerala</option>
+                            <option>Himachal</option>
+                            <option>Kashmir</option>
+                            <option>Goa</option>
+                            <option>Uttarakhand</option>
+                            <option>South India</option>
+                            <option>Thailand</option>
+                            <option>Singapore</option>
+                            <option>Malaysia</option>
+                            <option>Dubai</option>
+                            <option>Maldives</option>
+                        </select>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="3"></textarea>
+                        <i class="fas fa-comment" style="top: 16px;"></i>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Best Selling</span>
+                <h2>Popular Tour Destinations in India</h2>
+                <p>Explore the best-selling tour packages across India's most breathtaking destinations</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80" alt="Rajasthan Tour" loading="lazy">
+                        <div class="card-badge">Popular</div>
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rajasthan</h3>
+                        <p>Land of Kings - Explore royal palaces, desert safaris & vibrant culture</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 5-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564507592412-526c72cc92ef?w=600&q=80" alt="Golden Triangle Tour" loading="lazy">
+                        <div class="card-badge">Trending</div>
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Golden Triangle</h3>
+                        <p>Delhi - Agra - Jaipur: India's most iconic travel circuit</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 4-6 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="Kerala Tour" loading="lazy">
+                        <div class="card-badge">Best Seller</div>
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kerala</h3>
+                        <p>God's Own Country - Backwaters, tea gardens & pristine beaches</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 5-8 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=600&q=80" alt="Himachal Tour" loading="lazy">
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Himachal</h3>
+                        <p>Snow-capped peaks, adventure sports & beautiful hill stations</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 5-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1597074866923-dc0589150458?w=600&q=80" alt="Kashmir Tour" loading="lazy">
+                        <div class="card-badge">Must Visit</div>
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kashmir</h3>
+                        <p>Paradise on Earth - Dal Lake, Gulmarg, Pahalgam & Sonmarg</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 5-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Goa Tour" loading="lazy">
+                        <div class="card-badge">Hot Deal</div>
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Goa</h3>
+                        <p>Sun, sand & nightlife - India's ultimate beach destination</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 3-5 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=600&q=80" alt="Uttarakhand Tour" loading="lazy">
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Uttarakhand</h3>
+                        <p>Dev Bhoomi - Temples, treks & breathtaking Himalayan views</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 4-6 Days</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=600&q=80" alt="South India Tour" loading="lazy">
+                        <div class="card-price">Price On Request</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>South India</h3>
+                        <p>Ancient temples, spice plantations & stunning coastal beauty</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 6-8 Days</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="#enquiry" class="btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="Travel Experience" loading="lazy">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=400&q=80" alt="Adventure" loading="lazy">
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">Years of Experience</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2>Welcome to Musafir Holiday</h2>
+                    <p class="about-lead">Musafir Holiday offers you secure and comfortable Tour Packages & car rental services. We may not have the biggest brand name, but we have the experience and a faithful commitment to conduct business with unwavering high standards.</p>
+                    <p>We are committed to building rewarding and lasting relationships with our clients. Our core focus is on providing secure and comfortable customer care so that you celebrate superior tours & travel experiences.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Trusted & Secure</h4>
+                                <p>Safe and reliable travel partner</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>24/7 Support</h4>
+                                <p>Round the clock assistance</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-tags"></i>
+                            <div>
+                                <h4>Best Prices</h4>
+                                <p>Competitive & transparent pricing</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>Car Rentals</h4>
+                                <p>Clean cars with all amenities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#enquiry" class="btn-primary">Plan Your Trip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Day Tours -->
+    <section class="day-tours">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quick Getaways</span>
+                <h2>Day Tour Packages</h2>
+                <p>Short on time? Explore mesmerizing destinations in just a day and create beautiful memories</p>
+            </div>
+            <div class="day-tours-grid">
+                <div class="day-tour-card">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500&q=80" alt="Delhi Day Tour" loading="lazy">
+                    <div class="day-tour-overlay">
+                        <h3>Delhi Day Tour</h3>
+                        <span><i class="fas fa-clock"></i> Same Day Return</span>
+                        <a href="#enquiry" class="btn-outline-white">Book Now</a>
+                    </div>
+                </div>
+                <div class="day-tour-card">
+                    <img src="https://images.unsplash.com/photo-1564507592412-526c72cc92ef?w=500&q=80" alt="Agra Day Tour" loading="lazy">
+                    <div class="day-tour-overlay">
+                        <h3>Agra Day Tour</h3>
+                        <span><i class="fas fa-clock"></i> Same Day Return</span>
+                        <a href="#enquiry" class="btn-outline-white">Book Now</a>
+                    </div>
+                </div>
+                <div class="day-tour-card">
+                    <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=500&q=80" alt="Jaipur Day Tour" loading="lazy">
+                    <div class="day-tour-overlay">
+                        <h3>Jaipur Day Tour</h3>
+                        <span><i class="fas fa-clock"></i> Same Day Return</span>
+                        <a href="#enquiry" class="btn-outline-white">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Tours -->
+    <section class="international" id="international">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Go Global</span>
+                <h2>Top International Tour Packages</h2>
+                <p>Explore the world with our carefully curated international holiday packages</p>
+            </div>
+            <div class="international-grid">
+                <div class="intl-card">
+                    <div class="intl-image">
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80" alt="Thailand Tour" loading="lazy">
+                        <div class="intl-overlay">
+                            <a href="#enquiry" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="intl-content">
+                        <h3>Thailand Tour Package</h3>
+                        <p>Bangkok, Pattaya, Phuket & more</p>
+                        <span class="intl-price">Price On Request</span>
+                    </div>
+                </div>
+                <div class="intl-card">
+                    <div class="intl-image">
+                        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80" alt="Malaysia Tour" loading="lazy">
+                        <div class="intl-overlay">
+                            <a href="#enquiry" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="intl-content">
+                        <h3>Malaysia Tour</h3>
+                        <p>Kuala Lumpur, Langkawi, Penang</p>
+                        <span class="intl-price">Price On Request</span>
+                    </div>
+                </div>
+                <div class="intl-card">
+                    <div class="intl-image">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Singapore Tour" loading="lazy">
+                        <div class="intl-overlay">
+                            <a href="#enquiry" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="intl-content">
+                        <h3>Singapore Tour</h3>
+                        <p>Marina Bay, Sentosa Island & more</p>
+                        <span class="intl-price">Price On Request</span>
+                    </div>
+                </div>
+                <div class="intl-card">
+                    <div class="intl-image">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai Tour" loading="lazy">
+                        <div class="intl-overlay">
+                            <a href="#enquiry" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="intl-content">
+                        <h3>Dubai Tour Packages</h3>
+                        <p>Burj Khalifa, Desert Safari & more</p>
+                        <span class="intl-price">Price On Request</span>
+                    </div>
+                </div>
+                <div class="intl-card">
+                    <div class="intl-image">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives Tour" loading="lazy">
+                        <div class="intl-overlay">
+                            <a href="#enquiry" class="btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="intl-content">
+                        <h3>Maldives Tour</h3>
+                        <p>Crystal clear waters & luxury resorts</p>
+                        <span class="intl-price">Price On Request</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reviews</span>
+                <h2>What Our Clients Say</h2>
+                <p>Real experiences from our valued travelers</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"The trip was perfectly executed. The rooms and services were very nice. And we covered almost all the places. Thanks to Musafir Holiday for organising the trip."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <h4>Swati Singh</h4>
+                            <span>Rajasthan Tour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing experience with Musafir Holiday! The Kerala backwater houseboat stay was magical. Everything was arranged perfectly. Highly recommended for family trips."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <h4>Rahul Verma</h4>
+                            <span>Kerala Tour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Our honeymoon in Goa was beautifully planned by Musafir Holiday. The hotel, transfers, and sightseeing were all top-notch. Will definitely book again!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <span>Goa Honeymoon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Next Adventure?</h2>
+                <p>Let us help you create unforgettable memories. Get in touch with our travel experts today!</p>
+                <div class="cta-buttons">
+                    <a href="#enquiry" class="btn-primary">Get Free Quote</a>
+                    <a href="tel:+919555487620" class="btn-outline-white"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Reach out to us for any queries or bookings.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>NM 13, 2nd Floor, Old DLF<br>Sector 14, Gurgaon (HR) 122001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919555487620">+91-9555487620</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@musafirholiday.com">info@musafirholiday.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0266!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDEnMzUuOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-plane-departure"></i></span>
+                        <div>
+                            <span class="logo-text">Musafir</span>
+                            <span class="logo-sub">Holiday</span>
+                        </div>
+                    </a>
+                    <p>Your trusted travel partner for domestic and international tour packages. We create memories that last a lifetime.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#enquiry">Enquire Now</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Domestic Tours</h4>
+                    <ul>
+                        <li><a href="#enquiry">Rajasthan Tour</a></li>
+                        <li><a href="#enquiry">Golden Triangle</a></li>
+                        <li><a href="#enquiry">Kerala Tour</a></li>
+                        <li><a href="#enquiry">Himachal Tour</a></li>
+                        <li><a href="#enquiry">Kashmir Tour</a></li>
+                        <li><a href="#enquiry">Goa Tour</a></li>
+                        <li><a href="#enquiry">Uttarakhand Tour</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>International Tours</h4>
+                    <ul>
+                        <li><a href="#enquiry">Thailand Tour</a></li>
+                        <li><a href="#enquiry">Singapore Tour</a></li>
+                        <li><a href="#enquiry">Malaysia Tour</a></li>
+                        <li><a href="#enquiry">Dubai Tour</a></li>
+                        <li><a href="#enquiry">Maldives Tour</a></li>
+                        <li><a href="#enquiry">Nepal Tour</a></li>
+                        <li><a href="#enquiry">Sri Lanka Tour</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Musafir Holiday. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://api.whatsapp.com/send?phone=919555487620" class="float-btn whatsapp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919555487620" class="float-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
