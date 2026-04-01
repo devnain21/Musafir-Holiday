@@ -65,6 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextBtn = document.querySelector('.hero-nav.next');
         if (prevBtn) prevBtn.addEventListener('click', () => { setSlide(currentSlide - 1); resetSlider(); });
         if (nextBtn) nextBtn.addEventListener('click', () => { setSlide(currentSlide + 1); resetSlider(); });
+
+        // Touch swipe support for mobile
+        const heroEl = document.getElementById('heroSlider');
+        let touchStartX = 0;
+        let touchEndX = 0;
+        if (heroEl) {
+            heroEl.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            heroEl.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) setSlide(currentSlide + 1);
+                    else setSlide(currentSlide - 1);
+                    resetSlider();
+                }
+            }, { passive: true });
+        }
     }
 
     // --- Mobile Menu ---

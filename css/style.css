@@ -437,54 +437,310 @@ img { max-width: 100%; height: auto; display: block; }
     .tour-sidebar { position: static; }
 }
 @media (max-width: 768px) {
-    .top-bar-left { flex-direction: column; gap: 4px; font-size: 0.78rem; }
-    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 20px; box-shadow: var(--shadow-lg); gap: 4px; z-index: 100; }
+    /* Top Bar */
+    .top-bar { padding: 6px 0; }
+    .top-bar-content { flex-direction: column; gap: 4px; }
+    .top-bar-left { flex-direction: row; gap: 12px; font-size: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .top-bar-right { gap: 14px; justify-content: center; }
+
+    /* Navbar */
+    .nav-content { padding: 10px 0; }
+    .logo-icon { font-size: 1.6rem; }
+    .logo-text { font-size: 1.25rem; }
+    .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--white); flex-direction: column; padding: 16px 20px;
+        box-shadow: var(--shadow-lg); gap: 0; z-index: 100;
+        max-height: 70vh; overflow-y: auto;
+    }
     .nav-links.active { display: flex; }
-    .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding-left: 16px; background: var(--gray-light); border-radius: var(--radius-sm); margin-top: 4px; }
+    .nav-links > li > a { padding: 12px 14px; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0; }
+    .dropdown-menu {
+        position: static; opacity: 1; visibility: visible; transform: none;
+        box-shadow: none; padding-left: 16px; background: var(--gray-light);
+        border-radius: var(--radius-sm); margin-top: 4px; margin-bottom: 4px;
+    }
+    .dropdown-menu li a { padding: 10px 16px; font-size: 0.88rem; }
     .nav-btn { display: none; }
     .hamburger { display: flex; }
     .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px,6px); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px,-6px); }
-    .hero { height: 70vh; min-height: 500px; }
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content p { font-size: 1rem; }
-    .hero-nav { width: 40px; height: 40px; }
-    .hero-nav.prev { left: 15px; } .hero-nav.next { right: 15px; }
-    .stats-grid { grid-template-columns: repeat(2,1fr); padding: 24px; gap: 20px; }
-    .stat-item i { font-size: 2rem; } .stat-number { font-size: 1.6rem; }
+
+    /* Hero */
+    .hero { height: 75vh; min-height: 480px; }
+    .hero-content { width: 92%; }
+    .hero-content h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    .hero-content p { font-size: 0.95rem; margin-bottom: 24px; }
+    .hero-tag { font-size: 0.82rem; padding: 6px 18px; margin-bottom: 14px; }
+    .hero-content .btn-primary { padding: 12px 28px; font-size: 0.9rem; }
+    .hero-nav { width: 38px; height: 38px; font-size: 1rem; }
+    .hero-nav.prev { left: 10px; }
+    .hero-nav.next { right: 10px; }
+    .hero-dots { bottom: 20px; }
+    .hero-dot { width: 10px; height: 10px; }
+    .hero-dot.active { width: 28px; }
+
+    /* Stats */
+    .stats-bar { margin-top: -30px; }
+    .stats-grid { grid-template-columns: repeat(2,1fr); padding: 24px 20px; gap: 20px; border-radius: var(--radius); }
+    .stat-item { gap: 10px; }
+    .stat-item i { font-size: 1.8rem; }
+    .stat-number { font-size: 1.5rem; }
+    .stat-item p { font-size: 0.78rem; }
+
+    /* Sections */
+    .destinations, .about, .day-tours, .international, .testimonials { padding: 60px 0; }
+    .section-header { margin-bottom: 30px; }
+    .section-header h2 { font-size: 1.8rem; }
+    .section-header p { font-size: 0.92rem; }
+    .section-tag { font-size: 0.78rem; padding: 5px 16px; }
+
+    /* Enquiry Card */
+    .enquiry-section { padding: 60px 0; }
     .enquiry-card { grid-template-columns: 1fr; }
-    .enquiry-left, .enquiry-form { padding: 36px; }
-    .destinations-grid { grid-template-columns: repeat(2,1fr); }
-    .about-grid, .about-page-grid, .contact-page-grid { grid-template-columns: 1fr; }
-    .about-img-secondary { right: 10px; bottom: -20px; width: 160px; }
-    .about-experience-badge { right: 0; }
-    .day-tours-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-    .international-grid { grid-template-columns: repeat(2,1fr); }
-    .section-header h2 { font-size: 2rem; }
+    .enquiry-left { padding: 30px; text-align: center; }
+    .enquiry-left h2 { font-size: 1.7rem; }
+    .enquiry-features { align-items: center; }
+    .enquiry-form { padding: 30px; }
+    .enquiry-form h3 { font-size: 1.3rem; text-align: center; }
+
+    /* Destination Cards */
+    .destinations-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .card-image { height: 180px; }
+    .card-content { padding: 14px; }
+    .card-content h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .card-content > p { font-size: 0.82rem; margin-bottom: 10px; line-height: 1.5; }
+    .card-meta { font-size: 0.78rem; margin-bottom: 12px; }
+    .btn-outline { padding: 8px 18px; font-size: 0.82rem; }
+
+    /* About */
+    .about-grid, .about-page-grid, .contact-page-grid { grid-template-columns: 1fr; gap: 30px; }
+    .about-img-main img { height: 300px; }
+    .about-img-secondary { right: 10px; bottom: -20px; width: 140px; }
+    .about-img-secondary img { height: 130px; }
+    .about-experience-badge { right: 0; top: 20px; padding: 14px; }
+    .exp-number { font-size: 1.8rem; }
+    .about-content h2 { font-size: 1.8rem; }
+    .about-features { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .about-feature i { font-size: 1.3rem; }
+    .about-feature h4 { font-size: 0.88rem; }
+
+    /* Day Tours */
+    .day-tours-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .day-tour-card { height: 260px; }
+    .day-tour-overlay { padding: 20px; }
+    .day-tour-overlay h3 { font-size: 1.1rem; }
+    .day-tour-overlay span { font-size: 0.8rem; }
+    .day-tour-overlay .btn-outline-white { padding: 6px 16px; font-size: 0.78rem; }
+
+    /* International */
+    .international-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .intl-image { height: 180px; }
+    .intl-content { padding: 14px; }
+    .intl-content h3 { font-size: 1rem; }
+    .intl-content p { font-size: 0.82rem; }
+
+    /* Testimonials */
+    .testimonials-slider { flex-direction: column; align-items: center; gap: 16px; }
+    .testimonial-card { max-width: 100%; min-width: unset; padding: 28px; }
+    .testimonial-card > p { font-size: 0.9rem; }
+
+    /* CTA */
+    .cta-section { padding: 60px 0; background-attachment: scroll; }
+    .cta-content h2 { font-size: 1.8rem; }
+    .cta-content p { font-size: 0.95rem; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .cta-buttons a { width: 80%; text-align: center; }
+
+    /* Contact */
+    .contact { padding: 60px 0; }
     .contact-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .cta-content h2 { font-size: 2rem; }
-    .testimonials-slider { flex-direction: column; align-items: center; }
-    .testimonial-card { max-width: 100%; }
-    .page-banner-content h1 { font-size: 2.2rem; }
-    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    .contact-map { min-height: 280px; }
+    .contact-map iframe { min-height: 280px; }
+
+    /* Footer */
+    .footer { padding: 40px 0 0; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .footer-about { grid-column: 1 / -1; text-align: center; }
+    .footer-social { justify-content: center; }
+    .footer-links h4 { font-size: 1rem; }
+
+    /* Floating Buttons */
+    .floating-buttons { bottom: 16px; right: 16px; gap: 10px; }
+    .float-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+    .back-to-top { bottom: 16px; left: 16px; width: 42px; height: 42px; font-size: 1rem; }
+
+    /* Inner Pages */
+    .page-banner { height: 35vh; min-height: 260px; }
+    .page-banner-content h1 { font-size: 2rem; }
+    .breadcrumb { font-size: 0.85rem; }
+    .tour-detail { padding: 50px 0; }
+    .tour-info h2 { font-size: 1.6rem; }
+    .gallery-grid { grid-template-columns: repeat(2,1fr); gap: 8px; }
+    .gallery-grid img { height: 150px; }
+    .itinerary-item { padding: 16px; }
+    .sidebar-card { padding: 24px; }
+    .contact-form { padding: 28px; }
     .form-row { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .why-card { padding: 24px; }
+    .why-card i { font-size: 2rem; }
+    .about-page { padding: 50px 0; }
+    .about-page-img img { height: 280px; }
+    .about-page-content h2 { font-size: 1.6rem; }
+    .enquiry-page { padding: 50px 0; }
+    .enquiry-page-card { padding: 30px 24px; }
+    .enquiry-page-card h2 { font-size: 1.5rem; }
 }
 @media (max-width: 480px) {
+    /* Top bar hide for more space */
     .top-bar { display: none; }
-    .hero { height: 60vh; min-height: 400px; }
-    .hero-content h1 { font-size: 1.8rem; }
-    .hero-tag { font-size: 0.8rem; padding: 6px 16px; }
-    .stats-grid { grid-template-columns: 1fr 1fr; padding: 20px; }
-    .destinations-grid, .day-tours-grid, .international-grid { grid-template-columns: 1fr; }
-    .about-features { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .enquiry-left, .enquiry-form { padding: 28px; }
-    .section-header h2 { font-size: 1.6rem; }
-    .cta-content h2 { font-size: 1.6rem; }
-    .page-banner { min-height: 250px; }
-    .page-banner-content h1 { font-size: 1.8rem; }
-    .enquiry-page-card { padding: 30px; }
+
+    /* Logo smaller */
+    .logo-icon { font-size: 1.4rem; }
+    .logo-text { font-size: 1.15rem; }
+    .logo-sub { font-size: 0.65rem; letter-spacing: 1.5px; }
+
+    /* Hero fullscreen feel */
+    .hero { height: 70vh; min-height: 400px; }
+    .hero-content h1 { font-size: 1.7rem; line-height: 1.2; }
+    .hero-content p { font-size: 0.88rem; margin-bottom: 20px; }
+    .hero-tag { font-size: 0.75rem; padding: 5px 14px; margin-bottom: 10px; }
+    .hero-content .btn-primary { padding: 11px 24px; font-size: 0.85rem; }
+    .hero-nav { width: 34px; height: 34px; font-size: 0.9rem; }
+    .hero-nav.prev { left: 8px; }
+    .hero-nav.next { right: 8px; }
+    .hero-dots { bottom: 16px; gap: 8px; }
+    .hero-dot { width: 8px; height: 8px; }
+    .hero-dot.active { width: 24px; }
+
+    /* Stats compact */
+    .stats-bar { margin-top: -20px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; padding: 16px 14px; gap: 14px; }
+    .stat-item { flex-direction: column; text-align: center; gap: 6px; }
+    .stat-item i { font-size: 1.5rem; }
+    .stat-number { font-size: 1.3rem; }
+    .stat-item p { font-size: 0.72rem; }
+
+    /* Sections tighter */
+    .destinations, .about, .day-tours, .international, .testimonials { padding: 50px 0; }
+    .section-header { margin-bottom: 24px; }
+    .section-header h2 { font-size: 1.5rem; }
+    .section-header p { font-size: 0.85rem; }
+
+    /* Cards single column for clean look */
+    .destinations-grid { grid-template-columns: 1fr; gap: 20px; }
+    .card-image { height: 200px; }
+    .card-content { padding: 16px; }
+    .card-content h3 { font-size: 1.1rem; }
+    .card-content > p { font-size: 0.85rem; }
+    .card-meta { font-size: 0.8rem; }
+
+    /* Enquiry */
+    .enquiry-section { padding: 50px 0; }
+    .enquiry-left { padding: 24px 20px; }
+    .enquiry-left h2 { font-size: 1.5rem; }
+    .enquiry-left > p { font-size: 0.88rem; }
+    .enquiry-form { padding: 24px 20px; }
+    .enquiry-form h3 { font-size: 1.2rem; }
+    .form-group input, .form-group select, .form-group textarea { padding: 12px 14px 12px 40px; font-size: 0.88rem; }
+    .form-group i { left: 14px; font-size: 0.88rem; }
+    .btn-primary { padding: 12px 24px; font-size: 0.88rem; }
+
+    /* About - single col clean */
+    .about-grid { gap: 24px; }
+    .about-img-main img { height: 240px; }
+    .about-img-secondary { width: 120px; right: 8px; bottom: -16px; }
+    .about-img-secondary img { height: 100px; }
+    .about-experience-badge { padding: 12px; top: 16px; right: -4px; }
+    .exp-number { font-size: 1.5rem; }
+    .exp-text { font-size: 0.7rem; }
+    .about-content h2 { font-size: 1.5rem; }
+    .about-features { grid-template-columns: 1fr; gap: 14px; }
+
+    /* Day Tours */
+    .day-tours-grid { grid-template-columns: 1fr; gap: 16px; }
+    .day-tour-card { height: 240px; }
+    .day-tour-overlay h3 { font-size: 1.2rem; }
+
+    /* International single col */
+    .international-grid { grid-template-columns: 1fr; gap: 16px; }
+    .intl-image { height: 200px; }
+
+    /* Testimonials */
+    .testimonial-card { padding: 24px; }
+    .testimonial-card > p { font-size: 0.88rem; line-height: 1.6; }
+    .testimonial-author h4 { font-size: 0.92rem; }
+    .author-avatar { width: 42px; height: 42px; font-size: 1rem; }
+
+    /* CTA */
+    .cta-section { padding: 50px 0; }
+    .cta-content h2 { font-size: 1.5rem; }
+    .cta-content p { font-size: 0.88rem; margin-bottom: 24px; }
+    .cta-buttons a { width: 90%; padding: 12px 20px; font-size: 0.88rem; }
+
+    /* Contact */
+    .contact { padding: 50px 0; }
+    .contact-icon { width: 48px; height: 48px; }
+    .contact-icon i { font-size: 1.1rem; }
+    .contact-item h4 { font-size: 0.92rem; }
+    .contact-item p, .contact-item a { font-size: 0.85rem; }
+    .contact-map { min-height: 220px; }
+    .contact-map iframe { min-height: 220px; }
+
+    /* Footer single col */
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+    .footer-about { grid-column: auto; }
+    .footer-links h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-bottom p { font-size: 0.78rem; }
+
+    /* Floating smaller */
+    .floating-buttons { bottom: 12px; right: 12px; gap: 8px; }
+    .float-btn { width: 46px; height: 46px; font-size: 1.1rem; }
+    .back-to-top { bottom: 12px; left: 12px; width: 38px; height: 38px; font-size: 0.9rem; }
+
+    /* Inner Pages */
+    .page-banner { min-height: 220px; height: 30vh; }
+    .page-banner-content h1 { font-size: 1.6rem; }
+    .breadcrumb { font-size: 0.8rem; gap: 6px; }
+    .tour-detail { padding: 40px 0; }
+    .tour-info h2 { font-size: 1.4rem; }
+    .tour-info > p { font-size: 0.88rem; }
+    .highlight-list li { font-size: 0.88rem; padding: 8px 0; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .gallery-grid img { height: 120px; }
+    .itinerary-item { padding: 14px; margin-bottom: 12px; }
+    .itinerary-item h4 { font-size: 0.92rem; }
+    .itinerary-item p { font-size: 0.85rem; }
+    .sidebar-card { padding: 20px; }
+    .sidebar-card h3 { font-size: 1.1rem; }
+    .sidebar-price { font-size: 1rem; }
+    .sidebar-info li { font-size: 0.85rem; padding: 8px 0; }
+    .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .why-card { padding: 20px 14px; }
+    .why-card i { font-size: 1.8rem; margin-bottom: 10px; }
+    .why-card h4 { font-size: 0.95rem; }
+    .why-card p { font-size: 0.82rem; }
+    .about-page { padding: 40px 0; }
+    .about-page-img img { height: 220px; }
+    .about-page-content h2 { font-size: 1.4rem; }
+    .about-page-content p { font-size: 0.88rem; }
+    .contact-page { padding: 50px 0; }
+    .contact-form { padding: 24px 20px; }
+    .contact-form h3 { font-size: 1.3rem; }
+    .enquiry-page { padding: 40px 0; }
+    .enquiry-page-card { padding: 24px 18px; margin: 0 4px; }
+    .enquiry-page-card h2 { font-size: 1.3rem; }
+    .enquiry-page-card > p { font-size: 0.85rem; margin-bottom: 24px; }
+}
+@media (max-width: 360px) {
+    .hero-content h1 { font-size: 1.5rem; }
+    .hero-content p { font-size: 0.82rem; }
+    .section-header h2 { font-size: 1.35rem; }
+    .stats-grid { padding: 14px 10px; gap: 10px; }
+    .stat-number { font-size: 1.15rem; }
+    .enquiry-left h2, .cta-content h2 { font-size: 1.3rem; }
+    .page-banner-content h1 { font-size: 1.4rem; }
+    .why-grid { grid-template-columns: 1fr; }
 }
